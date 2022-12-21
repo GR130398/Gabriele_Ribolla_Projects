@@ -1,0 +1,134 @@
+ROBOTICS PROJECT 1
+10617369, Gabriele Ribolla
+
+
+FOLDER CONTENT:
+
+-this .txt file;
+-CMakeLists.txt, ros' required file;
+-config.rviz, rviz file config with our settings to see the odometry when a bag is running;
+-package.xml, ros' required file.
+-frames.pdf, structure of tf tree.
+
+IN launch FOLDER:
+-/project_1.launch, launch file that starts all the useful files of our project.
+
+IN cfg FOLDER:
+-/parameters.cfg, ros config file where we declare our ros parameter “/odom_comp/method” (see below for more info);
+-/robot_size.cfg, ros config file where we declare our robot parameter r,l(lx), w(ly),T,N, used for the dynamic
+ reconfigure to calibrate their values. We have set the optimal values found as default values and use the parameter node
+ to publish their values with the custom message "parameters_msgs.msg". The nodes computeVW and computeWhlRpm can subscribe
+ to it, in order to initialize them with that values;
+-/wh_par.cfg, ros config file where we declare the ros parameter "/computeVW/method_input_wh_states" to select them at
+ runtime if we would like to use the topic "/wheel_states/velocity" or "/wheel_states/position" to compute our variables vx,vy,w,
+ published on topic "/cmd_vel".
+
+IN msg FOLDER:
+-/recap.msg, msg prototype file where we declare a custom message that we publish in a topic (see below for more info);
+-/time_msg.msg, custom message used in "odom_comp.cpp" in order to define a time message type used to find the
+ integration sample time and to set the initial pose when the file .bag opened starts again;
+-/Wheel_rpm.msg, custom message used to publish wheel speeds;
+-/parameters_msgs.msg, custom message used to publish the values of the robot parameter, in the topic "/parameter".
+
+IN src FOLDER:
+-/computeVW.cpp, node used to compute v,ω from wheel speeds as a topic "/cmd_vel";
+-/computeWhlRpm.cpp, node used to compute wheel speeds from v,ω, read from ""/cmd_vel", as a custom message on
+ topic "/wheels_rpm";
+-src/odom_comp.cpp, cpp file of the node "odom_computation" that subscribe to "cmd_vel" to publish the odometry in "odom"
+it also as the rule of broadcaster of the tf between odom and base_link
+-src/parameter.cpp, is the cpp file of the node "parameter" that from the values selected in the dynamic_reconfigure
+ for that node, it publishes the values in the topic /parameters
+-src/tf_robot_pose.cpp, node used to provide tf to /robot/pose topic's messages;
+-src/resetGeneric_srv_client.cpp, client node uset to reset to (x,y) the position and to theta the orientation.
+
+IN srv FOLDER:
+-srv/ResetGen.srv, service used to reset the odometry in resetGen service.
+
+NAME OF ROS PARAMETERS:
+
+-/odom_comp/method: Method chosen for the odometry computation; it can be "Euler" or "Runge-Kutta"
+(dynamic reconfigure of this parameter), initialized by the launcher with "Euler";
+
+-/p_x: Initial position x, initialized by the launcher;
+-/p_y: Initial position y, initialized by the launcher;
+-/p_z: Initial position z, initialized by the launcher;
+-/o_x: Initial orientation x, initialized by the launcher;
+-/o_y: Initial orientation y, initialized by the launcher;
+-/o_z: Initial orientation z, initialized by the launcher;
+-/o_w: Initial orientation w, initialized by the launcher.
+ * one for each .bag, has to be uncommented for the .bag that we would like to start, respectively.
+ We have also developed an alternative way of selecting the initial position for the bag run, that can avoid uncommenting
+ each time the code in the file .launch and allow to switch between the bags.
+ Being closer to the goals of the Robotics project 1, we chose the first way.
+
+-/r, value="0.0768"
+-/lx, value="0.200"
+-/ly, value="0.169"
+-/N, value="42.8"
+-/T, value="5"
+ * The robot parameters can be fixed in the launch without using the dynamic reconfigure.
+   The code (now commented) in .launch, computeVW.cpp and computeWhRpm.cpp must (in the initialization part)
+   must be uncommented.
+
+STRUCTURE OF TF TREE:
+
+The frame "world" is our fixed reference frame; it is linked with the "robot/pose" and the "odom" reference frames.
+The reference frame "robot/pose" is the one attached to the robot, it moves with respect to "world" and it's
+broadcasted by "tf_robot_pose". "tf_robot_pose" is the node in charge of transforming the measures obtained by OptiTrack in a
+reference frame.
+We perform a static transformation between the "world" reference frame and the "odom" one and between "base_link" and
+"whFr", "whFl", "whRr", "whRl" so they are fixed.
+
+
+world-->odom---------------------------> base_link --> whFr
+     -->robot/pose_pose                            --> whFl
+                                                   --> whRr
+                                                   --> whRl
+
+
+
+
+
+STRUCTURE OF CUSTOM MESSAGES:
+
+-recap.msg:
+	nav_msgs/Odometry odom -> navigation messages data that contains information about our odometry;
+	std_msgs/String method -> integration method chosen (dynamic reconfigure can be used to change it).
+
+-Wheel_rpm.msg:
+	Header header
+	float64 rpm_fl
+	float64 rpm_fr      f/r:front/rear
+	float64 rpm_rl      l/r:left/right
+	float64 rpm_rr 
+
+-time_msg.msg:
+	int32 sec
+	int32 nsec
+
+-parameters_msgs.msg:
+	Header header
+	float64 r -> wheel radius;
+	float64 lx -> wheel position along x;
+	float64 ly -> wheel position along y;
+	float64 T -> gear ratio;
+	float64 N -> encoders resolution.
+
+HOW TO START/USE NODES:
+
+-Launch the package using "roslaunch project_1 project_1.launch": it launches all the useful nodes and parameters of our project.
+ Launcher file also launches rviz with our (provided) configuration and rqt_reconfigure in order to select the odometry integration
+ method ("Euler" or "Runge-Kutta"), to select the formula to compute v,ω by using encoder ticks or RPM,and to modify the robot parameters.
+-Reset odometry to (x,y,theta) using "rosrun project1 resetGeneric_client x y theta" or using "rosservice call /resetGen -- x y theta"
+ (x, y and theta are float64 and they must be provided through the command-line).
+
+COMMENTS AND ASSUMPTIONS:
+
+-the calibration of the robot parameters has been done using the bag1.bag. The errors obtained are in terms of 1% wrt to
+ the values published in /robot/pose;
+-the wheel speeds are published in [rad/min];
+-we know that we cannot totally trust in the /robot/pose topic for the initialization of the pose when one bag starts, but
+ we consider it as an help to speed up the test, in particular switching between the bags, and validation of the project.
+ Notice that only the data that we pass for the initial pose are the values to compute the initial orientation, so we do the
+ same of what we will do if the parts in the file .launch are uncommented.
+ (At this moment, we use file .launch for each bag)

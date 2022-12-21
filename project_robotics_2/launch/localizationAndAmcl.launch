@@ -1,0 +1,57 @@
+
+<launch>
+   <param name="/dir" value="$(find project_2)/maps/my_mapbag1.pgm"/>
+   <!-- start static tf -->
+      <include file="$(find project_2)/launch/static_tf.launch.xml"/>
+
+     <node pkg ="project_2" name= "tf_odom" type= "tf_odom" respawn = "false"/>
+
+         <!-- start ira_laser_tool -->
+         <include file="$(find project_2)/launch/ira_laser_tools.launch.xml"/>
+
+  <!-- Name of the map to use and initial position -->
+  <arg name="map_file"        default="$(find project_2)/maps/my_mapbag1.yaml"/>
+  <arg name="initial_pose_x"  default="0.0"/>
+  <arg name="initial_pose_y"  default="0.0"/>
+  <arg name="initial_pose_a"  default="0.0"/>
+
+  <arg name="odom_frame_id"   default="/odometry/filtered"/>
+  <arg name="global_frame_id" default="map"/>
+
+  <param name="/use_sim_time" value="true"/>
+
+
+  <!--  ****** Maps *****  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
+    <param name="frame_id" value="map"/>
+  </node>
+
+
+  <!--  ****** amcl *****  -->
+  <include file="$(find project_2)/launch/amcl.launch.xml">
+    <arg name="scan_topic" value="scan"/>
+    <arg name="use_map_topic" value="true"/>
+    <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+    <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+    <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+  </include>
+
+
+  <!--  **************** Visualisation ****************  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find project_2)/rviz/localization.rviz"/>
+
+ <!--  **************** Add the path for base_link in Rviz using a ros node  ****************  -->
+ <include file="$(find project_2)/launch/hector_trajectory_server.launch.xml" />
+
+ <!--  **************** Add the path for amcl_pose in Rviz using my node  ****************  -->
+<node pkg="project_2" type="path_node" name="path_node" output="screen"> </node>
+
+<!-- ******************* to publish the image-->
+<node pkg="project_2" type="image_pub" name="image_pub" output="screen"> </node>
+
+
+<!-- ******************* to save the image-->
+<node pkg="project_2" type="picture_server" name="picture_Server" output="screen"> </node>
+
+
+</launch>

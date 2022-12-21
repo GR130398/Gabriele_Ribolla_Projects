@@ -1,0 +1,130 @@
+<!--ROBOTICS PROJECT 1
+10617369, Gabriele Ribolla
+
+-->
+<launch>
+    <param name="use_sim_time" value="true"/>
+    <param name="/odom_comp/method" value="Euler"/>
+
+<!-- to uncomment if is not used the dynamic reconfigure way
+     <param name="/r" value="0.0768"/>
+     <param name="/lx" value="0.200"/>
+     <param name="/ly" value="0.169"/>
+     <param name="/N" value="42.8"/>
+     <param name="/T" value="5"/>
+-->
+
+
+    <!-- BAG1: to compare with odom use the initial pose below -->
+
+    <!--
+
+    valori bag1 con funzione per trovare initial bag
+    pose:
+      pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: -0.00199683126993
+          w: 0.999859809875
+-->
+
+<!-- to uncomment to use them for the bag1 -->
+
+    <param name="/p_x" value="0.0"/>
+    <param name="/p_y" value="0.00"/>
+    <param name="/p_z" value="0.0"/>
+    <param name="/o_x" value="0.0"/>
+    <param name="/o_y" value="0.0"/>
+    <param name="/o_z" value="-0.00199683126993"/>
+    <param name="/o_w" value="0.999859809875"/>
+-->
+
+    <!-- BAG2: to compare with odom use the initial pose below -->
+
+
+
+<!-- initial values for the initial position of the bag2
+   position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: -0.00408832123503
+      w: 0.999669075012
+-->
+
+
+
+  <!-- uncomment this for bag2 -->
+<!--
+    <param name="/p_x" value="0.0"/>
+    <param name="/p_y" value="0.0"/>
+    <param name="/p_z" value="0.0"/>
+    <param name="/o_x" value="0.0"/>
+    <param name="/o_y" value="0.0"/>
+    <param name="/o_z" value="-0.00408832123503"/>
+    <param name="/o_w" value="0.999669075012"/>
+-->
+    <!-- BAG3:  to compare with odom use the initial pose below
+
+     pose:
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: -0.0015803615097
+          w: 0.99988758564
+-->
+    <!-- uncomment this for bag3 -->
+    <!--
+    <param name="/p_x" value="0.0"/>
+    <param name="/p_y" value="0.0"/>
+    <param name="/p_z" value="0.0"/>
+    <param name="/o_x" value="-0.0"/>
+    <param name="o_y/o_y" value="0.0"/>
+    <param name="/o_z" value="-0.0015803615097"/>
+    <param name="/o_w" value="0.99988758564"/>
+    -->
+
+
+
+<!-- project_1 node  -->
+    <node pkg="project_1" type="computeVW" name="compute_VW"   />
+    <node pkg="project_1" type="computeWhlRpm" name="compute_Whl_Rpm" />
+    <node pkg="project_1" type="parameter" name="parameter_" />
+    <node pkg="project_1" type="tf_robot_pose" name="tf_r_pose"/>
+    <node pkg="project_1" type = "odom_computation" name = "odom_comp" output="screen"/>
+
+
+
+ <!--static_transform_publisher x y z yaw pitch roll frame_id child_frame_id-->
+ <!-- the height of the robot is z: 0.368735998869,
+       raggio = 0.070 non modificato,
+       quidi altezza ruote a 0.035 da terra
+       quindi 0.368-0.035 = 0.333 = z ruote -->
+
+        <node pkg="tf2_ros" type="static_transform_publisher" name="word_odom_transf" args="0.0 0.0 0.368 0.0 0 0 world odom"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_wh_Fl" args="0.200 0.169 -0.333 0.0 0 0 base_link whFl"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_wh_Fr" args="0.200 -0.169 -0.333 0.0 0 0 base_link whFr"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_wh_Rl" args="-0.200 0.169 -0.333 0.0 0 0 base_link whRl"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_wh_Rr" args="-0.200 -0.169 -0.333 0.0 0 0 base_link whRr"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="robot_pose_wh_Fl" args="0.200 0.169 -0.333 0.0 0 0 robot/pose_pose r_whFl"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="robot_pose_wh_Fr" args="0.200 -0.169 -0.333 0.0 0 0 robot/pose_pose r_whFr"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="robot_pose_wh_Rl" args="-0.200 0.169 -0.333 0.0 0 0 robot/pose_pose r_whRl"/>
+        <node pkg="tf2_ros" type="static_transform_publisher" name="robot_pose_wh_Rr" args="-0.200 -0.169 -0.333 0.0 0 0 robot/pose_pose r_whRr"/>
+        <node type="rviz" name="rviz" pkg="rviz" args="-d $(find project_1)/config.rviz"/>
+        <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="my_rqt_reconfigure"/>
+
+
+</launch>
+

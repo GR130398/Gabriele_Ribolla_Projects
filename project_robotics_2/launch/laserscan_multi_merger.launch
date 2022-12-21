@@ -1,0 +1,13 @@
+<!-- DESCRITPION -->
+
+<launch>
+
+  <!-- start static tf -->
+    <include file="$(find project_2)/launch/static_tf.launch.xml"/>
+
+<node pkg ="project_2" name= "tf_odom" type= "tf_odom" respawn = "false"/>
+
+	 <!-- start ira_laser_tool -->
+         <include file="$(find project_2)/launch/ira_laser_tools.launch.xml"/>
+
+</launch>
