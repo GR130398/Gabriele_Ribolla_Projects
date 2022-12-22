@@ -36,7 +36,7 @@ of the model in ROS using Gazebo-Rviz for visualization
 ### Tools used
 - Matlab 
 - Simulink
-### Description
+### Description of the work
 Development of a controller for a dc motor separately excited
 ### Main files
 - [report_dc_motor_separately_excited](control_dcMotor_separately_excited/report_dc_motor_separately_excited.pdf), pdf file, description of the project
