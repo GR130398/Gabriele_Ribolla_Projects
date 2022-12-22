@@ -14,7 +14,7 @@ Working in progress
 - MatLab
 - Simulink
 ### Description of the work
-Developtment of different controllers (LQR,LQG,Pole-placment,PID,MPC) for the "ball and beam model".
+Developtment of different controllers (LQR,LQG,Pole-placement,PID,MPC) for the "ball and beam model".
 ### Main files
 - [C3R_ACL_report](ball_and_beam_control/C3R_ACL_report.pdf) : report describing all the passages and choices taken during the development with the related results 
 ### N.B.
