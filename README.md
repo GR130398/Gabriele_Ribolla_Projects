@@ -1,6 +1,6 @@
 # Gabriele_Ribolla_Projects
 Recap of the folders in this repository
-## [Master's degree thesis](Master's degree thesis)
+## [Master's degree thesis](Master_degree_thesis)
 ### Tools used
 - Uppaal
 - C
@@ -20,7 +20,7 @@ Developtment of different controllers (LQR,LQG,Pole-placment,PID,MPC) for the "b
 ### N.B.
 - at this moment,I do not have the matlab and simulink files of the code to share to you. 
 
-## [Barchelor's degree thesis](barchelor's degree thesis) [ITA]
+## [Barchelor's degree thesis](barchelor_degree_thesis) [ITA]
 ### Tools used
 - Solidworks
 - Gazebo
