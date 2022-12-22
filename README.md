@@ -82,12 +82,11 @@ and write a service to save an image with the map and the trajectory of the robo
 - Python
 - Html
 - Django
-
 ### Description of the work
 Phases of designing an application and basic development
 ### Main files
--_se_ukraine_finder_final_report: pdf file, detailed description of the  porject
-- SE_slide_presentation : pdf file, presentation of the project
+-_se_ukraine_finder_final_report: pdf file, detailed description 
+- SE_slide_presentation : pdf file, presentation 
 
 ## trajectory_tracking_drone [ENG] (Team - work)
 ### Tools used
@@ -95,6 +94,6 @@ Phases of designing an application and basic development
 ### Description of the work
 Optimal trajectory tracking if a quadcopter along a race-track
 ### Main files
-- project_presentation_drone: pdf file, presentation of the project
-- Report: pdf file, detailed description of the project 
+- project_presentation_drone: pdf file, presentation 
+- Report: pdf file, detailed description 
 - Codice: folder , collection of all code files 
