@@ -22,7 +22,7 @@ Developtment of different controllers (LQR,LQG,Pole-placment,PID,MPC) for the "b
 Creation of a URDF using Solidworks and insertion 
 of the model in ROS using Gazebo-Rviz for visualization
 ### Main files
-- barchelor's degree thesis: pdf file, explain all the work
+- [barchelor's degree thesis](barchelor's degree thesis/barchelor's degree thesis.pdf): pdf file, explain all the work
 
 ## [control_dcMotor_separately_excited](control_dcMotor_separately_excited) [ENG]
 ### Tools used
@@ -31,17 +31,17 @@ of the model in ROS using Gazebo-Rviz for visualization
 ### Description
 Development of a controller for a dc motor separately excited
 ### Main files
-- report_dc_motor_separately_excited, pdf file, description of the project
-- demd_e2_dcMotor_separatelyExcited : Matlab file, compile it to initialize the data needed for the controller in the simulink file.
-- demd_dcMotor_separatelyExcit_f1 : Simulink file, simulate the dc motor-controller model
+- [report_dc_motor_separately_excited](control_dcMotor_separately_excited/report_dc_motor_separately_excited.pdf), pdf file, description of the project
+- [demd_e2_dcMotor_separatelyExcited](control_dcMotor_separately_excited/demd_e2_dcMotor_separatelyExcited.m) : Matlab file, compile it to initialize the data needed for the controller in the simulink file.
+- [demd_dcMotor_separatelyExcit_f1](control_dcMotor_separately_excited/demd_dcMotor_separatelyExcit_f1.slx) : Simulink file, simulate the dc motor-controller model
 ## [irrigation_channel_control](irrigation_channel_control) [ENG]
 ### Tools used
 - Matlab 
 ### Description of the work
 Control of an irrigation channels system with different control structure (centralized, decentralized, distribuited)
 ### Main files
-- 26_IrrigationChannel : pdf file, detailed description of the system and the  objectives of the work
-- mainMAT26IrrigationChannel_v3 : Matlab file, main of the project
+- [26_IrrigationChannel](irrigation_channel_control/26_IrrigationChannel.pdf) : pdf file, detailed description of the system and the  objectives of the work
+- [mainMAT26IrrigationChannel_v3](irrigation_channel_control/mainMAT26IrrigationChannel_v3.m) : Matlab file, main of the project
 
 ## [project_robotics_1](project_robotics_1) [ENG]
 ### Tools used
@@ -53,8 +53,8 @@ Control of an irrigation channels system with different control structure (centr
 ### Description of the work
 Computation of the odometry (Euler,Runge-Kutta), wheel control speed of an omnidirectinal robot, starting from different bags.
 ### Main files
-- Project1 : pdf file, detailed description of the objectives of the project
-- instructions: txt file, detailed description of all the files of the  project and how to launch it
+- [Project1](project_robotics_1/Project1.pdf) : pdf file, detailed description of the objectives of the project
+- [instructions](project_robotics_1/instructions.txt): txt file, detailed description of all the files of the  project and how to launch it
 - launch->project_1.launch: launch file
 
 ## [project_robotics_2](project_robotics_2) [ENG]
