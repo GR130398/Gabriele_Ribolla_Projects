@@ -71,7 +71,7 @@ write the launch files:
 and write a service to save an image with the map and the trajectory of the robot (omnidirectional one)
 
 ### Main files
-- [Second Project 2022](project_robotics_2/Second Project 2022.pdf): pdf file, detailed description of the project objectives
+- [Second Project 2022](project_robotics_2/Second Project 2022.pdf) : pdf file, detailed description of the project objectives
 - [instructions](project_robotics_2/instructions.txt) : txt file, detailed description of all the files of the project and how to launch it
 - [launch](project_robotics_2/launch) : folder, all the files used to launch it
 ## [project_software_engineering](project_software_engineering) [ENG] (Team-work)
