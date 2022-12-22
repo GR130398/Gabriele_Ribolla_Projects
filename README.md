@@ -5,7 +5,7 @@ Recap of the folders in this repository
 - Uppaal
 - C
 - C ++
-### Description of the work
+### Description 
 Polimi has developed a framework for developing robotic applications in service settings (such as hospitals, home assistance, education) that can handle the unpredictability of human behavior. The framework features a formal model of humans with a probabilistic formulation of free will, as they may ignore the robot's instructions or make autonomous decisions altogether. This thesis project aims at developing a more sophisticated formulation of the human decision-making process based on cognitive models existing in the literature (preferably with probabilistic features). The result should be integrated into the existing formal model and validated to assess the improvement compared to the current model via formal verification of significant use cases.
 ### Main file
 Working in progress
@@ -13,7 +13,7 @@ Working in progress
 ### Tools used
 - MatLab
 - Simulink
-### Description of the work
+### Description 
 Developtment of different controllers (LQR,LQG,Pole-placement,PID,MPC) for the "ball and beam model".
 ### Main files
 - [C3R_ACL_report](ball_and_beam_control/C3R_ACL_report.pdf) : report describing all the passages and choices taken during the development with the related results 
@@ -36,7 +36,7 @@ of the model in ROS using Gazebo-Rviz for visualization
 ### Tools used
 - Matlab 
 - Simulink
-### Description of the work
+### Description 
 Development of a controller for a dc motor separately excited
 ### Main files
 - [report_dc_motor_separately_excited](control_dcMotor_separately_excited/report_dc_motor_separately_excited.pdf), pdf file, description of the project
@@ -45,7 +45,7 @@ Development of a controller for a dc motor separately excited
 ## [irrigation_channel_control](irrigation_channel_control) [ENG]
 ### Tools used
 - Matlab 
-### Description of the work
+### Description 
 Control of an irrigation channels system with different control structure (centralized, decentralized, distribuited)
 ### Main files
 - [26_IrrigationChannel](irrigation_channel_control/26_IrrigationChannel.pdf) : pdf file, detailed description of the system and the  objectives of the work
@@ -58,7 +58,7 @@ Control of an irrigation channels system with different control structure (centr
 - PlotJuggler
 - Clion
 - Oracle virtualBox
-### Description of the work
+### Description 
 Computation of the odometry (Euler,Runge-Kutta), wheel control speed of an omnidirectinal robot, starting from different bags.
 ### Main files
 - [Project1](project_robotics_1/Project1.pdf) : pdf file, detailed description of the objectives of the project
@@ -72,7 +72,7 @@ Computation of the odometry (Euler,Runge-Kutta), wheel control speed of an omnid
 - PlotJuggler
 - Clion
 - Oracle virtualBox
-### Description of the work
+### Description 
 write the launch files: 
 - to create the enviroment map (from a bag);
 - to perform the amcl based localization (from a bag);
@@ -90,7 +90,7 @@ and write a service to save an image with the map and the trajectory of the robo
 - Python
 - Html
 - Django
-### Description of the work
+### Description 
 Phases of designing an application and basic development
 ### Main files
 - [se_ukraine_finder_final_report](project_software_engineering/se_ukraine_finder_final_report.pdf): pdf file, detailed description 
@@ -99,7 +99,7 @@ Phases of designing an application and basic development
 ## [trajectory_tracking_drone](trajectory_tracking_drone) [ENG] (Team - work)
 ### Tools used
 - MatLab
-### Description of the work
+### Description 
 Optimal trajectory tracking if a quadcopter along a race-track
 ### Main files
 - [project_presentation_drone](trajectory_tracking_drone/project_presentation_drone.pdf): pdf file, presentation 
