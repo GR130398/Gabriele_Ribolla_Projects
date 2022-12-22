@@ -1,6 +1,6 @@
 # Gabriele_Ribolla_Projects
 Recap of the folders in this repository
-## [Master's degree thesis](Master_degree_thesis)
+## [Master's degree thesis](Master_degree_thesis) [ENG] 
 ### Tools used
 - Uppaal
 - C
