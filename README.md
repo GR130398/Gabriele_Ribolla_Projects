@@ -71,9 +71,9 @@ write the launch files:
 and write a service to save an image with the map and the trajectory of the robot (omnidirectional one)
 
 ### Main files
-- [Second Project 2022_](): pdf file, detailed description of the project objectives
-- instructions : txt file, detailed description of all the files of the project and how to launch it
-- launch : folder, all the files used to launch it
+- [Second Project 2022](project_robotics_2/Second_Project_2022.pdf) : pdf file, detailed description of the project objectives
+- [instructions](project_robotics_2/instructions.txt) : txt file, detailed description of all the files of the project and how to launch it
+- [launch](project_robotics_2/launch) : folder, all the files used to launch it
 ## [project_software_engineering](project_software_engineering) [ENG] (Team-work)
 ### Tools used
 - StarUMl
@@ -85,7 +85,7 @@ and write a service to save an image with the map and the trajectory of the robo
 ### Description of the work
 Phases of designing an application and basic development
 ### Main files
-- [se_ukraine_finder_final_report_](project_software_engineering/se_ukraine_finder_final_report_.pdf): pdf file, detailed description 
+- [se_ukraine_finder_final_report](project_software_engineering/se_ukraine_finder_final_report.pdf): pdf file, detailed description 
 - [SE_slide_presentation](project_software_engineering/SE_slide_presentation.pdf) : pdf file, presentation 
 
 ## [trajectory_tracking_drone](trajectory_tracking_drone) [ENG] (Team - work)
