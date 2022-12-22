@@ -55,7 +55,7 @@ Computation of the odometry (Euler,Runge-Kutta), wheel control speed of an omnid
 ### Main files
 - [Project1](project_robotics_1/Project1.pdf) : pdf file, detailed description of the objectives of the project
 - [instructions](project_robotics_1/instructions.txt): txt file, detailed description of all the files of the  project and how to launch it
-- launch->project_1.launch: launch file
+- launch->[project_1.launch](project_robotics_1/launch/project_1.launch): launch file
 
 ## [project_robotics_2](project_robotics_2) [ENG]
 ### Tools used
@@ -71,7 +71,7 @@ write the launch files:
 and write a service to save an image with the map and the trajectory of the robot (omnidirectional one)
 
 ### Main files
-- _Second Project 2022: pdf file, detailed description of the project objectives
+- [Second Project 2022_](): pdf file, detailed description of the project objectives
 - instructions : txt file, detailed description of all the files of the project and how to launch it
 - launch : folder, all the files used to launch it
 ## [project_software_engineering](project_software_engineering) [ENG] (Team-work)
@@ -85,8 +85,8 @@ and write a service to save an image with the map and the trajectory of the robo
 ### Description of the work
 Phases of designing an application and basic development
 ### Main files
--_se_ukraine_finder_final_report: pdf file, detailed description 
-- SE_slide_presentation : pdf file, presentation 
+- [se_ukraine_finder_final_report_](project_software_engineering/se_ukraine_finder_final_report_.pdf): pdf file, detailed description 
+- [SE_slide_presentation](project_software_engineering/SE_slide_presentation.pdf) : pdf file, presentation 
 
 ## [trajectory_tracking_drone](trajectory_tracking_drone) [ENG] (Team - work)
 ### Tools used
@@ -94,6 +94,6 @@ Phases of designing an application and basic development
 ### Description of the work
 Optimal trajectory tracking if a quadcopter along a race-track
 ### Main files
-- project_presentation_drone: pdf file, presentation 
-- Report: pdf file, detailed description 
-- Codice: folder , collection of all code files 
+- [project_presentation_drone](trajectory_tracking_drone/project_presentation_drone.pdf): pdf file, presentation 
+- [Report](trajectory_tracking_drone/Report.pdf): pdf file, detailed description 
+- [Codice](trajectory_tracking_drone/Codice): folder , collection of all code files 
