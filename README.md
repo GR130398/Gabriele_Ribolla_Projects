@@ -1,5 +1,5 @@
-# gabriele_ribolla_projects_iit
-Recap of the folders in the repository
+# gabriele_ribolla_projects
+Recap of the folders in this repository
 
 ## ball_and_beam_control [ENG] (team-work)
 ### Tools used
