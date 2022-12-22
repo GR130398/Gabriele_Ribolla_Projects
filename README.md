@@ -8,7 +8,7 @@ Recap of the folders in this repository
 ### Description of the work
 Developtment of different controllers (LQR,LQG,Pole-placment,PID,MPC) for the "ball and beam model".
 ### Main files
-- [C3R_ACL_report](ball_and_beam_control/C3R_ACL_report) : report describing all the passages and choices taken during the development with the related results 
+- [C3R_ACL_report](ball_and_beam_control/C3R_ACL_report.pdf) : report describing all the passages and choices taken during the development with the related results 
 ### N.B.
 - at this moment,I do not have the matlab and simulink files of the code to share to you. 
 
