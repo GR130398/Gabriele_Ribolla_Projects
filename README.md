@@ -1,4 +1,4 @@
-# gabriele_ribolla_projects
+# Gabriele_Ribolla_Projects
 Recap of the folders in this repository
 
 ## [ball_and_beam_control](ball_and_beam_control) [ENG] (team-work)
