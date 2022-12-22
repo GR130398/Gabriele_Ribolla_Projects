@@ -1,7 +1,7 @@
 # gabriele_ribolla_projects
 Recap of the folders in this repository
 
-## ball_and_beam_control [ENG] (team-work)
+## [ball_and_beam_control](ball_and_beam_control) [ENG] (team-work)
 ### Tools used
 - MatLab
 - Simulink
