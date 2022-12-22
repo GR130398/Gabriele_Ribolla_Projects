@@ -1,6 +1,14 @@
 # Gabriele_Ribolla_Projects
 Recap of the folders in this repository
-
+## [Master's degree thesis](Master's degree thesis)
+### Tools used
+- Uppaal
+- C
+- C ++
+### Description of the work
+Development of the human model behavior in Uppaal 
+### Main file
+In development
 ## [ball_and_beam_control](ball_and_beam_control) [ENG] (team-work)
 ### Tools used
 - MatLab
