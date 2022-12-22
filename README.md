@@ -85,7 +85,7 @@ and write a service to save an image with the map and the trajectory of the robo
 ### Description of the work
 Phases of designing an application and basic development
 ### Main files
-- [se_ukraine_finder_final_report](project_software_engineering/se_ukraine_finder_final_report_.pdf): pdf file, detailed description 
+- [se_ukraine_finder_final_report](project_software_engineering/se_ukraine_finder_final_report.pdf): pdf file, detailed description 
 - [SE_slide_presentation](project_software_engineering/SE_slide_presentation.pdf) : pdf file, presentation 
 
 ## [trajectory_tracking_drone](trajectory_tracking_drone) [ENG] (Team - work)
