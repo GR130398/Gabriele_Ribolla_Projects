@@ -1,7 +1,7 @@
 # gabriele_ribolla_projects_iit
 Recap of the folders in the repository
 
-## ball_and_beam_control [ENG](team-work)
+## ball_and_beam_control [ENG] (team-work)
 ### Tools used
 - MatLab
 - Simulink
@@ -86,9 +86,15 @@ and write a service to save an image with the map and the trajectory of the robo
 ### Description of the work
 Phases of designing an application and basic development
 ### Main files
+-_se_ukraine_finder_final_report: pdf file, detailed description of the  porject
+- SE_slide_presentation : pdf file, presentation of the project
 
 ## trajectory_tracking_drone [ENG] (Team - work)
 ### Tools used
+- MatLab
 ### Description of the work
+Optimal trajectory tracking if a quadcopter along a race-track
 ### Main files
-
+- project_presentation_drone: pdf file, presentation of the project
+- Report: pdf file, detailed description of the project 
+- Codice: folder , collection of all code files 
