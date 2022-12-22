@@ -8,7 +8,7 @@ Recap of the folders in this repository
 ### Description of the work
 Polimi has developed a framework for developing robotic applications in service settings (such as hospitals, home assistance, education) that can handle the unpredictability of human behavior. The framework features a formal model of humans with a probabilistic formulation of free will, as they may ignore the robot's instructions or make autonomous decisions altogether. This thesis project aims at developing a more sophisticated formulation of the human decision-making process based on cognitive models existing in the literature (preferably with probabilistic features). The result should be integrated into the existing formal model and validated to assess the improvement compared to the current model via formal verification of significant use cases.
 ### Main file
-In development
+Working in progress
 ## [ball_and_beam_control](ball_and_beam_control) [ENG] (team-work)
 ### Tools used
 - MatLab
