@@ -6,7 +6,11 @@ Recap of the folders in this repository
 - C
 - C ++
 ### Description of the work
+<<<<<<< HEAD
 Development of the human model behavior in Uppaal 
+=======
+Polimi has developed a framework for developing robotic applications in service settings (such as hospitals, home assistance, education) that can handle the unpredictability of human behavior. The framework features a formal model of humans with a probabilistic formulation of free will, as they may ignore the robot's instructions or make autonomous decisions altogether. This thesis project aims at developing a more sophisticated formulation of the human decision-making process based on cognitive models existing in the literature (preferably with probabilistic features). The result should be integrated into the existing formal model and validated to assess the improvement compared to the current model via formal verification of significant use cases.
+>>>>>>> parent of c9b3d60 (Update README.md)
 ### Main file
 
 ## [ball_and_beam_control](ball_and_beam_control) [ENG] (team-work)
@@ -14,7 +18,11 @@ Development of the human model behavior in Uppaal
 - MatLab
 - Simulink
 ### Description of the work
+<<<<<<< HEAD
 Developtment of different controllers (LQR,LQG,Pole-placment,PID,MPC) for the "ball and beam model".
+=======
+Developtment of different controllers (LQR,LQG,Pole-placement,PID,MPC) for the "ball and beam model".
+>>>>>>> parent of c9b3d60 (Update README.md)
 ### Main files
 - [C3R_ACL_report](ball_and_beam_control/C3R_ACL_report.pdf) : report describing all the passages and choices taken during the development with the related results 
 ### N.B.
@@ -36,7 +44,11 @@ of the model in ROS using Gazebo-Rviz for visualization
 ### Tools used
 - Matlab 
 - Simulink
+<<<<<<< HEAD
 ### Description
+=======
+### Description of the work
+>>>>>>> parent of c9b3d60 (Update README.md)
 Development of a controller for a dc motor separately excited
 ### Main files
 - [report_dc_motor_separately_excited](control_dcMotor_separately_excited/report_dc_motor_separately_excited.pdf), pdf file, description of the project
