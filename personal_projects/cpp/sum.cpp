@@ -16,7 +16,7 @@ int main() {
     cin >> a;
     cout << "inserici un altro numero "<<endl ;
     cin>> b;
-    cout<< sum(a,b);
+    cout<< "somma: "<< sum(a,b);
 
     return 0;
 }
