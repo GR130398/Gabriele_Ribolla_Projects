@@ -25,4 +25,6 @@ int main(){
     std::cout<<fooo<<std::endl;
     std::cout<<*(fo+1)<<std::endl;
     std::cout<<myArray[0]<<std::endl;
+    std::cout<<foo<<std::endl;
+    std::cout<<**foo+1<<std::endl;
 }
