@@ -16,7 +16,7 @@ I'm working on it, the project is not finished
 - MatLab
 - Simulink
 ### Description
-Developtment of different controllers (LQR,LQG,Pole-placment,PID,MPC) for the "ball and beam model".
+Development of different controllers (LQR,LQG,Pole-placement,PID,MPC) for the "ball and beam model".
 ### Main files
 - [C3R_ACL_report](ball_and_beam_control/C3R_ACL_report.pdf) : report describing all the passages and choices taken during the development with the related results 
 ### N.B.
@@ -39,7 +39,7 @@ of the model in ROS using Gazebo-Rviz for visualization
 - Matlab 
 - Simulink
 ### Description
-Development of a controller for a dc motor separately excited
+Control of an irrigation channels system with different control structures (centralized, decentralized, distributed)
 ### Main files
 - [report_dc_motor_separately_excited](control_dcMotor_separately_excited/report_dc_motor_separately_excited.pdf), pdf file, description of the project
 - [demd_e2_dcMotor_separatelyExcited](control_dcMotor_separately_excited/demd_e2_dcMotor_separatelyExcited.m) : Matlab file, compile it to initialize the data needed for the controller in the simulink file.
@@ -61,7 +61,7 @@ Control of an irrigation channels system with different control structure (centr
 - Clion
 - Oracle virtualBox
 ### Description
-Computation of the odometry (Euler,Runge-Kutta), wheel control speed of an omnidirectinal robot, starting from different bags.
+Computation of the odometry (Euler, Runge-Kutta), and wheel control speed of an omnidirectional robot, starting from different bags. 
 ### Main files
 - [Project1](project_robotics_1/Project1.pdf) : pdf file, detailed description of the objectives of the project
 - [instructions](project_robotics_1/instructions.txt): txt file, detailed description of all the files of the  project and how to launch it
